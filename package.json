@@ -11,6 +11,9 @@
     "gulp-jsvalidate": "~0.1.1",
     "gulp-bytediff": "~0.1.8",
     "gulp-load-plugins": "~0.2.0",
-    "gulp-imagemin": "~0.1.4"
+    "gulp-imagemin": "~0.1.4",
+    "gulp-watch": "~0.5.0",
+    "open": "0.0.4",
+    "express": "~3.4.8"
   }
 }
