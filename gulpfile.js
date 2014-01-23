@@ -4,6 +4,7 @@ var open = require('open');
 var tinylr = require('tiny-lr');
 var preview = require('./preview');
 var lrServer = tinylr();
+var jshint = require('gulp-jshint-cached');
 
 gulp.task('build', function() {
 	gulp.src('app/*.html')
@@ -14,6 +15,8 @@ gulp.task('build', function() {
 		.pipe(gulp.dest('dist/img'));
 
 	gulp.src('app/js/**/*.js')
+		.pipe(jshint.cached())
+		.pipe(jshint.reporter('jshint-stylish'))
 		.pipe(gulp.dest('dist/js'));
 
 	gulp.src('lib/phaser/build/phaser.min.js')
@@ -41,6 +44,8 @@ gulp.task('watch', function() {
 
 	gulp.watch('app/js/**/*.js', function() {
 		gulp.src('app/js/**/*.js')
+			.pipe(jshint.cached())
+			.pipe(jshint.reporter('jshint-stylish'))
 			.pipe(gulp.dest('dist/js'))
 			.pipe(tasks.livereload(lrServer));
 	});
