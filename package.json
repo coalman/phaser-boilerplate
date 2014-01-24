@@ -2,7 +2,12 @@
   "name": "phaser-boilerplate",
   "version": "0.1.0",
   "author": "Michael Coleman",
+  "description": "Basic boilerplate for a phaser project.",
   "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Coalman/phaser-boilerplate.git"
+  },
   "devDependencies": {
     "gulp-livereload": "~0.2.0",
     "tiny-lr": "0.0.5",

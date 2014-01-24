@@ -42,3 +42,16 @@ Project Layout
     |-preview.js    // little node script that starts a local preview server.
     |-history.md    // changelog
     |-readme.md     // thing you are reading
+
+Build System
+------------
+
+This boilerplate uses a [gulp.js] to perform tasks and builds. There are essentially three commands built in to our `gulpfile.js`:
+
+    $ gulp          // default task, runs the build then preview task
+    $ gulp build
+    $ gulp preview
+
+The `build` task currently lints your javascript files with jshint, minifies all png images, and copies javascript/html/png files to the `dist` directory. This is useful if you just want to build the project.
+
+The `preview` task currently starts a livereload and local preview server (on ports 35729 and 3000 respectively). This is good if you don't want to build the project and just want to preview your current game.
